@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="#7a8b6a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Vnější kruh -->
+  <circle cx="200" cy="200" r="180"/>
+
+  <!-- Květ života: středový kruh + 6 kruhů kolem -->
+  <circle cx="200" cy="200" r="90"/>
+  <circle cx="290" cy="200" r="90"/>
+  <circle cx="110" cy="200" r="90"/>
+  <circle cx="245" cy="122.058" r="90"/>
+  <circle cx="155" cy="122.058" r="90"/>
+  <circle cx="245" cy="277.942" r="90"/>
+  <circle cx="155" cy="277.942" r="90"/>
+
+  <!-- Hexagram: trojúhelník vzhůru -->
+  <polygon points="200,20 44.118,290 355.882,290"/>
+
+  <!-- Hexagram: trojúhelník dolů -->
+  <polygon points="200,380 44.118,110 355.882,110"/>
+
+  <!-- Středový trojúhelník vrcholem nahoru -->
+  <!-- Vrcholy leží na středech hran vnějšího trojúhelníku směřujícího dolů -->
+  <polygon points="200,110 122.059,245 277.941,245"/>
+
+  <!-- Linie ze středu prochází vrcholy středového trojúhelníku až k vrcholům vnějšího trojúhelníku směřujícího vzhůru -->
+  <line x1="200" y1="200" x2="200" y2="20"/>
+  <line x1="200" y1="200" x2="44.118" y2="290"/>
+  <line x1="200" y1="200" x2="355.882" y2="290"/>
+</svg>

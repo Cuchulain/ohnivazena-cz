@@ -1,0 +1,23 @@
+export const SITE = {
+  website: "https://ohnivazena.cz/",
+  author: "Janinka Živa Čejková",
+  profile: "https://ohnivazena.cz/kdo-jsem/",
+  desc: "Průvodkyně na cestě k přirozenosti ženy, přírodě a vědomí sebe.",
+  title: "Ohnivá žena",
+  ogImage: "og-ohnivazena.jpg",
+  lightAndDarkMode: false,
+  postPerIndex: 6,
+  postPerPage: 9,
+  scheduledPostMargin: 15 * 60 * 1000,
+  showArchives: false,
+  showBackButton: false,
+  editPost: {
+    enabled: false,
+    text: "",
+    url: "",
+  },
+  dynamicOgImage: true,
+  dir: "ltr",
+  lang: "cs",
+  timezone: "Europe/Prague",
+} as const;

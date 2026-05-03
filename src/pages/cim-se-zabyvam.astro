@@ -1,0 +1,108 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout
+  title="Čím se zabývám — Ohnivá žena"
+  description="Magie Země, Magie Vesmíru, šetrný přístup ke zdraví a péče o děti. Janinka Živa Čejková vás provede na cestě k přirozenosti."
+>
+  <Header />
+  <main id="main-content" class="app-layout">
+
+    <section class="pt-10 pb-6 border-b border-border">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Čím se zabývám</h1>
+      <p class="text-foreground/75 max-w-xl leading-relaxed">
+        Provázím ženy i muže na cestě k sobě — k tělu, k přírodě, k vědomí. Každá oblast vychází z hlubokého propojení se zemí i s vesmírem.
+      </p>
+    </section>
+
+    <!-- Magie Země -->
+    <section class="py-10 border-b border-border">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl font-semibold text-accent mb-4">🌿 Magie Země</h2>
+        <p class="leading-relaxed mb-3">
+          Země nás nese, živí a uzdravuje — buďme s ní v přímém kontaktu. Spolupracuji s přírodními energiemi a přirozenými cykly, které nás pomáhají ukotvit a nalézt rovnováhu.
+        </p>
+        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+          <li>Sezónní obřady a slavení přírodních svátků</li>
+          <li>Práce s živly — zemí, vodou, ohněm, vzduchem</li>
+          <li>Propojení s přírodními cykly a lunárním kalendářem</li>
+          <li>Obřady ukotvení a očisty</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Magie Vesmíru -->
+    <section class="py-10 border-b border-border">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl font-semibold text-accent mb-4">✨ Magie Vesmíru</h2>
+        <p class="leading-relaxed mb-3">
+          Andělé, archandělé a nanebevzetí mistři jsou průvodci, kteří vždy čekají, až je oslovíme. Pomáhám navázat vědomé spojení s těmito bytostmi a přijímat jejich podporu v každodenním životě.
+        </p>
+        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+          <li>Spolupráce s anděly a archanděly</li>
+          <li>Spojení s nanebevzatými mistry a duchovními průvodci</li>
+          <li>Spolupráce s vesmírskými energiemi a světlem</li>
+          <li>Meditace a vědomé propojení</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Svědectví — Gabriel Angell -->
+    <section class="py-10 border-b border-border">
+      <figure class="max-w-xl rounded-lg border border-border bg-muted/30 p-6">
+        <blockquote class="leading-relaxed italic text-foreground/80">
+          „Byl jsem čerstvě po rozchodu se svou nejmilovanější přítelkyní. Oslovil jsem Janinku. Probrala se mnou vztyčné body, šli jsme na věc. Byl úplněk a svátek Valentína. Cítil jsem hlubokou ztrátu a žal, který vyvrcholil ve vyhrknuté slzy — ale pak jsem se cítil lehce, svobodně. Jako kdybych se poprvé svobodně nadechl. Pokud máte jakýkoli problém, co vás oslabuje, nečekejte. Oslovte tuto skvělou ženu. Má informace přímo ze zdroje."
+        </blockquote>
+        <figcaption class="mt-4 text-sm font-medium text-accent">— Gabriel Angell</figcaption>
+      </figure>
+    </section>
+
+    <!-- Šetrný přístup ke zdraví -->
+    <section class="py-10 border-b border-border">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl font-semibold text-accent mb-4">🌱 Šetrný přístup ke zdraví</h2>
+        <p class="leading-relaxed mb-3">
+          Tělo je moudrý systém, který nám dává signály. Věřím v přirozenou podporu organismu — homeopatii, bylinnou medicínu a vědomou výživu jako cestu k vitálnímu zdraví.
+        </p>
+        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+          <li>Homeopatie a alternativy ke klasické medicíně</li>
+          <li>RAW výživa a živé potraviny</li>
+          <li>Bylinná medicína a přírodní léčba</li>
+          <li>Podpora imunity a detox</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Péče o děti -->
+    <section class="py-10 border-b border-border">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl font-semibold text-accent mb-4">👶 Péče o děti a přirozené rodičovství</h2>
+        <p class="leading-relaxed mb-3">
+          Děti přicházejí na svět jako plně vědomé bytosti. Ráda pomohu rodičům navázat hluboký kontakt se svým dítětem a jít cestou přirozeného rodičovství.
+        </p>
+        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+          <li>Domácí porody a přirozené porodnictví</li>
+          <li>Přirozené a respektující rodičovství</li>
+          <li>Individuální vzdělávání a unschooling</li>
+          <li>Výživa pro nejmenší a kojení</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-10 text-center">
+      <p class="text-foreground/75 mb-5">Máte otázku nebo chcete začít? Napište mi.</p>
+      <a
+        href="/kontakt/"
+        class="rounded bg-accent px-8 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+      >
+        Kontaktujte mě
+      </a>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,112 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={SITE.title} description={SITE.desc}>
+  <Header />
+  <main id="main-content" class="app-layout">
+
+    <!-- Hero sekce -->
+    <section id="hero" class="pt-12 pb-10 border-b border-border text-center">
+      <!-- Logo naraJana -->
+      <div class="flex justify-center mb-6">
+        <img
+          src="/narajana.svg"
+          alt="naraJana"
+          width="360"
+          height="140"
+          class="max-w-[360px] w-full"
+          fetchpriority="high"
+        />
+      </div>
+
+      <h1 class="sr-only">Ohnivá žena — naraJana</h1>
+
+      <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed text-foreground/80 italic">
+        „Pojďme žít sjednoceni se sebou, nalezením spojení se Zemí a Vesmírem."
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/kontakt/"
+          class="rounded bg-accent px-7 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+        >
+          Úvodní rozhovor zdarma →
+        </a>
+        <a
+          href="/cim-se-zabyvam/"
+          class="rounded border border-accent px-7 py-3 font-medium text-accent hover:bg-muted transition-colors"
+        >
+          Čím se zabývám
+        </a>
+      </div>
+    </section>
+
+    <!-- Oblast zaměření — stručně -->
+    <section class="py-10 border-b border-border">
+      <h2 class="text-2xl font-semibold text-center mb-8">Co pro vás mohu udělat</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div class="rounded-lg border border-border bg-muted/40 p-5">
+          <h3 class="font-semibold text-accent mb-2">🌿 Magie Země</h3>
+          <p class="text-sm leading-relaxed">Obřady, spolupráce s přírodou, přírodní cykly a živly. Ukotvení v těle a v zemi pod nohama.</p>
+        </div>
+        <div class="rounded-lg border border-border bg-muted/40 p-5">
+          <h3 class="font-semibold text-accent mb-2">✨ Magie Vesmíru</h3>
+          <p class="text-sm leading-relaxed">Andělé, archandělé, nanebevzetí mistři a vesmírné energie. Propojení s vyšším vědomím.</p>
+        </div>
+        <div class="rounded-lg border border-border bg-muted/40 p-5">
+          <h3 class="font-semibold text-accent mb-2">🌱 Šetrné zdraví</h3>
+          <p class="text-sm leading-relaxed">Alternativy ke klasické medicíně, homeopatie, RAW výživa. Tělo jako chrám duše.</p>
+        </div>
+        <div class="rounded-lg border border-border bg-muted/40 p-5">
+          <h3 class="font-semibold text-accent mb-2">👶 Péče o děti</h3>
+          <p class="text-sm leading-relaxed">Individuální vzdělávání, domácí porody, přirozené rodičovství. Děti jako respektované bytosti.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Svědectví -->
+    <section class="py-10 border-b border-border">
+      <h2 class="text-2xl font-semibold text-center mb-8">Napsali o mně</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <figure class="rounded-lg border border-border bg-muted/30 p-5">
+          <blockquote class="text-sm leading-relaxed italic text-foreground/80">
+            „Spolupráce s Janinkou je skvělá. Hledala jsem východisko z komplikovaných vztahů s muži a našla. Cítím se svěže, svobodně, blíž své přirozenosti."
+          </blockquote>
+          <figcaption class="mt-3 text-xs font-medium text-accent">— Kristýna Magnusková</figcaption>
+        </figure>
+        <figure class="rounded-lg border border-border bg-muted/30 p-5">
+          <blockquote class="text-sm leading-relaxed italic text-foreground/80">
+            „Parádní spolupráce. Nádherné uvolnění. Hodinka utekla jako nic. Mám hned lepší den a věřím, že to tak bude už pořád."
+          </blockquote>
+          <figcaption class="mt-3 text-xs font-medium text-accent">— Ianete</figcaption>
+        </figure>
+        <figure class="rounded-lg border border-border bg-muted/30 p-5">
+          <blockquote class="text-sm leading-relaxed italic text-foreground/80">
+            „Plnohodnotné rady od úžasné ženy. Je úžasná žena, která umí vždy moudře poradit."
+          </blockquote>
+          <figcaption class="mt-3 text-xs font-medium text-accent">— Pavlína</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="py-10 text-center">
+      <h2 class="text-2xl font-semibold mb-3">Úvodní rozhovor zdarma</h2>
+      <p class="max-w-md mx-auto text-foreground/75 mb-6">
+        První půlhodina rozhovoru je pro vás zdarma. Pojďme se poznat a zjistit, co pro Vás mohu udělat.
+      </p>
+      <a
+        href="/kontakt/"
+        class="rounded bg-accent px-8 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+      >
+        Napište mi
+      </a>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+

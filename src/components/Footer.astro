@@ -1,0 +1,36 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+const currentYear = new Date().getFullYear();
+
+type Props = {
+  noMarginTop?: boolean;
+} & HTMLAttributes<"footer">;
+
+const { noMarginTop = false, class: className, ...attrs } = Astro.props;
+---
+
+<footer
+  class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
+  {...attrs}
+>
+  <div
+    class:list={[
+      "py-6 sm:py-4",
+      "border-t border-border",
+      "flex flex-col items-center justify-between gap-2 sm:flex-row",
+    ]}
+  >
+    <span class="text-sm text-foreground/60">
+      © {currentYear} Janinka Živa Čejková. Všechna práva vyhrazena.
+    </span>
+    <span class="text-sm text-foreground/50">
+      Tvorba webu:&nbsp;<a
+        href="https://jancejka.cz"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-accent transition-colors"
+      >Jan Čejka</a>
+    </span>
+  </div>
+</footer>

@@ -1,0 +1,57 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout
+  title="Kdo jsem — Ohnivá žena"
+  description="Janinka Živa Čejková — průvodkyně ženskou spiritualitou, přírodou, rituály a přirozeným bytím."
+>
+  <Header />
+  <main id="main-content" class="app-layout">
+
+    <section class="pt-10 pb-8 border-b border-border">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Kdo jsem</h1>
+      <p class="text-foreground/75 max-w-xl leading-relaxed">
+        Jsem Janinka Živa Čejková — žena, matka, průvodkyně.
+      </p>
+    </section>
+
+    <section class="py-10 border-b border-border max-w-2xl">
+      <p class="leading-relaxed mb-4">
+        Celý život cítím hluboké propojení s přírodou, s rytmy Země i Vesmíru. Tato cesta mě přivedla k rituálům, bylinné medicíně, homeopatii a vědomé práci s energiemi — anděly, archanděly a nanebevzatými mistry.
+      </p>
+      <p class="leading-relaxed mb-4">
+        Jsem matka, která zvolila cestu přirozeného rodičovství — domácí porody, individuální vzdělávání, respekt k dítěti jako plně vědomé bytosti. Tato zkušenost mě formovala a stala se součástí toho, čím provázím ostatní.
+      </p>
+      <p class="leading-relaxed mb-4">
+        Věřím, že každá žena (i každý muž) nese v sobě celé nebe i zemi. Moje práce je pomáhat vám tuto spojitost znovu objevit a žít ji každý den.
+      </p>
+      <p class="leading-relaxed">
+        Pracuji individuálně, s otevřeným srdcem, bez soudů. Každé setkání je jedinečné — stejně jako vy.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-10 text-center">
+      <p class="text-foreground/75 mb-5">Chcete se poznat osobně? Napište mi.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/kontakt/"
+          class="rounded bg-accent px-8 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+        >
+          Kontaktujte mě
+        </a>
+        <a
+          href="/cim-se-zabyvam/"
+          class="rounded border border-accent px-8 py-3 font-medium text-accent hover:bg-muted transition-colors"
+        >
+          Čím se zabývám
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

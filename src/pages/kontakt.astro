@@ -1,0 +1,117 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout
+  title="Kontakt — Ohnivá žena"
+  description="Napište Janince Živě Čejkové. Úvodní půlhodina rozhovoru je zdarma."
+>
+  <Header />
+  <main id="main-content" class="app-layout">
+
+    <section class="pt-10 pb-6 border-b border-border">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Kontakt</h1>
+      <p class="text-foreground/75 max-w-xl leading-relaxed">
+        Napište mi — první půlhodina rozhovoru je <strong>zdarma</strong>. Ráda se s vámi setkám a zjistíme, jak vám mohu pomoci.
+      </p>
+    </section>
+
+    <section class="py-10 max-w-lg">
+      <form
+        id="contact-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="flex flex-col gap-5"
+      >
+        <!-- Web3Forms access key -->
+        <input
+          type="hidden"
+          name="access_key"
+          value={import.meta.env.PUBLIC_WEB3FORMS_KEY ?? ""}
+        />
+        <input type="hidden" name="subject" value="Nová zpráva z ohnivazena.cz" />
+        <input type="hidden" name="from_name" value="Ohnivá žena — web" />
+        <input type="hidden" name="redirect" value="false" />
+        <!-- Honeypot proti spamu -->
+        <input
+          type="checkbox"
+          name="botcheck"
+          class="hidden"
+          style="display:none"
+          tabindex="-1"
+          autocomplete="off"
+        />
+
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          Jméno
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Vaše jméno"
+            class="rounded border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+          />
+        </label>
+
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          E-mail
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="vas@email.cz"
+            class="rounded border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+          />
+        </label>
+
+        <label class="flex flex-col gap-1 text-sm font-medium">
+          Zpráva
+          <textarea
+            name="message"
+            required
+            rows="5"
+            placeholder="Napište mi, s čím vám mohu pomoci…"
+            class="rounded border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent resize-y"
+          ></textarea>
+        </label>
+
+        <button
+          type="submit"
+          class="rounded bg-accent px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+        >
+          Odeslat zprávu
+        </button>
+      </form>
+
+      <!-- Potvrzení po odeslání -->
+      <div
+        id="form-success"
+        class="hidden mt-6 rounded border border-border bg-muted/40 p-5 text-center"
+      >
+        <p class="text-lg font-medium">Zpráva odeslána. Ozveme se vám co nejdříve. 🙏</p>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const success = document.getElementById("form-success");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: data,
+    });
+    if (res.ok) {
+      form.classList.add("hidden");
+      success?.classList.remove("hidden");
+    }
+  });
+</script>
