@@ -1,8 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 175" aria-label="naraJana">
+  <!--
+    naraJana logo — Rajdhani 600
+    Font: https://fonts.google.com/specimen/Rajdhani
+    Barva: #d4620f (--accent)
+
+    Poznámky ke struktuře:
+    - NARA: text, text-anchor="end", zakotven x=224
+    - ANA:  text, text-anchor="start", zakotven x=236
+    - J:    svislá osa x=230; patička M222,42 L238,42; smyčka dolů vlevo
+    - ♥:    plné srdce, střed x=230, vrchol y≈3
+  -->
   <defs>
     <style>
       .logo-text {
-        font-family: 'Montserrat', 'Raleway', 'Century Gothic', Arial, sans-serif;
+        font-family: 'Rajdhani', 'Montserrat', Arial, sans-serif;
         font-weight: 600;
         fill: #d4620f;
         letter-spacing: 0.06em;
@@ -11,24 +22,24 @@
     </style>
   </defs>
 
-  <!-- Srdíčko nad J — malé plné srdce, stejná barva -->
+  <!-- Srdíčko nad J — odsazené výše -->
   <path
-    d="M230,14 C230,14 224,7 218,10 C212,13 212,21 218,26 L230,37 L242,26 C248,21 248,13 242,10 C236,7 230,14 230,14 Z"
+    d="M230,10 C230,10 224,3 218,6 C212,9 212,17 218,22 L230,30 L242,22 C248,17 248,9 242,6 C236,3 230,10 230,10 Z"
     fill="#d4620f"
   />
 
-  <!-- J — tenká svislá čára bez příčky + hluboká smyčka dolů vlevo -->
+  <!-- J — patička nahoře + svislá čára se smyčkou dolů vlevo -->
   <path
-    d="M230,37 L230,118 Q230,158 210,163 Q190,168 188,150"
+    d="M222,42 L238,42 M230,42 L230,118 Q230,158 210,163 Q190,168 188,150"
     stroke="#d4620f"
     stroke-width="4.5"
     stroke-linecap="round"
     fill="none"
   />
 
-  <!-- NARA vlevo od J -->
-  <text x="12" y="102" class="logo-text">NARA</text>
+  <!-- NARA vlevo — končí těsně před J -->
+  <text x="224" y="102" text-anchor="end" class="logo-text">NARA</text>
 
-  <!-- ANA vpravo od J -->
-  <text x="246" y="102" class="logo-text">ANA</text>
+  <!-- ANA vpravo — začíná těsně za J -->
+  <text x="236" y="102" text-anchor="start" class="logo-text">ANA</text>
 </svg>

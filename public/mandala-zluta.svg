@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none" stroke="url(#duha)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <linearGradient id="duha" x1="0" y1="380" x2="0" y2="20" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e53935"/>
+      <stop offset="0.2" stop-color="#fb8c00"/>
+      <stop offset="0.4" stop-color="#fdd835"/>
+      <stop offset="0.5" stop-color="#43a047"/>
+      <stop offset="0.7" stop-color="#1e88e5"/>
+      <stop offset="0.85" stop-color="#3949ab"/>
+      <stop offset="1" stop-color="#8e24aa"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feFlood flood-color="#f5c200" flood-opacity="0.9" result="color"/>
+      <feComposite in="color" in2="blur1" operator="in" result="coloredBlur1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur2"/>
+      <feFlood flood-color="#f5c200" flood-opacity="0.5" result="color2"/>
+      <feComposite in="color2" in2="blur2" operator="in" result="coloredBlur2"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur2"/>
+        <feMergeNode in="coloredBlur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#glow)">
+    <circle cx="200" cy="200" r="180"/>
+    <circle cx="200" cy="200" r="90"/>
+    <circle cx="290" cy="200" r="90"/>
+    <circle cx="110" cy="200" r="90"/>
+    <circle cx="245" cy="122.058" r="90"/>
+    <circle cx="155" cy="122.058" r="90"/>
+    <circle cx="245" cy="277.942" r="90"/>
+    <circle cx="155" cy="277.942" r="90"/>
+    <polygon points="200,20 44.118,290 355.882,290"/>
+    <polygon points="200,380 44.118,110 355.882,110"/>
+    <polygon points="200,110 122.059,245 277.941,245"/>
+    <line x1="200" y1="200" x2="200" y2="20"/>
+    <line x1="200" y1="200" x2="44.118" y2="290"/>
+    <line x1="200" y1="200" x2="355.882" y2="290"/>
+  </g>
+</svg>

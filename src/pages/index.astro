@@ -11,16 +11,44 @@ import { SITE } from "@/config";
 
     <!-- Hero sekce -->
     <section id="hero" class="pt-12 pb-10 border-b border-border text-center">
-      <!-- Logo naraJana -->
+      <!-- Logo naraJana — inline SVG pro podporu webového fontu -->
       <div class="flex justify-center mb-6">
-        <img
-          src="/narajana.svg"
-          alt="naraJana"
-          width="360"
-          height="140"
-          class="max-w-[360px] w-full"
-          fetchpriority="high"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 460 175"
+          aria-label="naraJana"
+          role="img"
+          class="max-w-[360px] w-full h-auto"
+        >
+          <defs>
+            <style>
+              .logo-text {
+                font-family: 'Rajdhani', 'Montserrat', Arial, sans-serif;
+                font-weight: 600;
+                fill: #d4620f;
+                letter-spacing: 0.06em;
+                font-size: 62px;
+              }
+            </style>
+          </defs>
+          <!-- Srdíčko nad J — odsazené vyše -->
+          <path
+            d="M230,10 C230,10 224,3 218,6 C212,9 212,17 218,22 L230,30 L242,22 C248,17 248,9 242,6 C236,3 230,10 230,10 Z"
+            fill="#d4620f"
+          />
+          <!-- J — patička nahoře + svislá čára se smyčkou -->
+          <path
+            d="M222,42 L238,42 M230,42 L230,118 Q230,158 210,163 Q190,168 188,150"
+            stroke="#d4620f"
+            stroke-width="4.5"
+            stroke-linecap="round"
+            fill="none"
+          />
+          <!-- NARA vlevo — končí těsně před J -->
+          <text x="224" y="102" text-anchor="end" class="logo-text">NARA</text>
+          <!-- ANA vpravo — začíná těsně za J -->
+          <text x="236" y="102" text-anchor="start" class="logo-text">ANA</text>
+        </svg>
       </div>
 
       <h1 class="sr-only">Ohnivá žena — naraJana</h1>
