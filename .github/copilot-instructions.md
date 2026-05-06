@@ -1,7 +1,7 @@
 # Instrukce pro projekt: Ohnivá žena — Astro + AstroPaper
 
 ## Účel projektu
-Migrace webu https://ohnivazena.cz z WordPressu do statického generátoru **Astro** s šablonou **AstroPaper v5**. Web patří Janince **Živě Čejkové** — průvodkyni ženskou spiritualitou, přírodou, obřady a přirozeným bytím.
+Migrace webu https://ohnivazena.cz z WordPressu do statického generátoru **Astro** s šablonou **AstroPaper v5**. Web patří Janince **Živě** — průvodkyni ženskou spiritualitou, přírodou, obřady a přirozeným bytím.
 
 ---
 
@@ -84,7 +84,7 @@ Vždy použij tato nastavení jako základ:
 ```ts
 export const SITE = {
   website: "https://ohnivazena.cz/",
-  author: "Janinka Živa Čejková",
+  author: "Janinka Živa",
   profile: "https://ohnivazena.cz/kdo-jsem/",
   desc: "Průvodkyně na cestě k přirozenosti ženy, přírodě a vědomí sebe.",
   title: "Ohnivá žena",

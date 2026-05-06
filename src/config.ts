@@ -1,6 +1,6 @@
 export const SITE = {
   website: "https://ohnivazena.cz/",
-  author: "Janinka Živa Čejková",
+  author: "Janinka Živa",
   profile: "https://ohnivazena.cz/kdo-jsem/",
   desc: "Průvodkyně na cestě k přirozenosti ženy, přírodě a vědomí sebe.",
   title: "Ohnivá žena",
