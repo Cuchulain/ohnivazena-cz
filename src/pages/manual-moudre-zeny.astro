@@ -1,0 +1,156 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+
+const botURL = "https://t.me/uSkyCzBot?start=MZENY20";
+---
+
+<Layout
+  title="AI průvodce Manuálem moudré ženy — Ohnivá žena"
+  description="Promluvte si s AI průvodcem, který vychází z knihy Manuál moudré ženy. Prvních 20 zpráv je zdarma."
+>
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="border-b border-border pt-12 pb-14 text-center">
+      <p
+        class="mb-4 text-xs font-semibold tracking-[0.2em] text-accent uppercase"
+      >
+        Manuál moudré ženy
+      </p>
+      <h1
+        class="mx-auto mb-6 max-w-2xl text-4xl leading-tight font-bold sm:text-5xl"
+      >
+        Promluvte si s AI průvodcem knihou
+      </h1>
+      <p
+        class="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-foreground/75"
+      >
+        BuddyPro vychází z obsahu <em>Manuálu moudré ženy</em> a pomůže vám orientovat
+        se v jeho 28denní cestě archetypy Panny, Matky a Stařeny — od každodenních
+        témat a praktických cvičení až po závěrečnou oslavu vlastní proměny.
+      </p>
+      <a
+        href={botURL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block rounded bg-accent px-7 py-3.5 font-semibold text-white transition-opacity hover:opacity-90"
+      >
+        Otevřít průvodce v Telegramu →
+      </a>
+      <p class="mt-4 text-sm text-foreground/60">
+        Prvních 20 zpráv zdarma · další si můžete kdykoli dokoupit
+      </p>
+    </section>
+
+    <section class="border-b border-border py-12">
+      <div class="grid gap-10 md:grid-cols-2">
+        <div>
+          <p
+            class="mb-3 text-xs font-semibold tracking-[0.18em] text-accent uppercase"
+          >
+            Inspirace
+          </p>
+          <h2 class="mb-5 text-2xl font-semibold">Na co se můžete zeptat</h2>
+          <ul class="space-y-4 text-foreground/80">
+            <li class="flex gap-3">
+              <span class="text-accent" aria-hidden="true">●</span><span
+                >Jak je 28denní cesta rozdělena mezi Pannu, Matku, Stařenu a
+                oslavu?</span
+              >
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent" aria-hidden="true">●</span><span
+                >Jak pracovat s každodenním praktickým cvičením a odměnou?</span
+              >
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent" aria-hidden="true">●</span><span
+                >Co Manuál říká o vztahu k vlastnímu tělu a ženskému cyklu?</span
+              >
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent" aria-hidden="true">●</span><span
+                >Které části se věnují mateřství, dětem a respektující výchově?</span
+              >
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent" aria-hidden="true">●</span><span
+                >Jak rozvíjet intuici a své spojení s přírodou?</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p
+            class="mb-3 text-xs font-semibold tracking-[0.18em] text-accent uppercase"
+          >
+            Jednoduše
+          </p>
+          <h2 class="mb-5 text-2xl font-semibold">Jak to funguje</h2>
+          <ol class="space-y-5">
+            <li class="flex gap-4">
+              <span
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted font-semibold text-accent"
+                >1</span
+              >
+              <p class="pt-1 text-foreground/80">
+                Otevřete chat v aplikaci Telegram.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted font-semibold text-accent"
+                >2</span
+              >
+              <p class="pt-1 text-foreground/80">
+                Položte otázku ke knize nebo napište, které téma chcete probrat.
+              </p>
+            </li>
+            <li class="flex gap-4">
+              <span
+                class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted font-semibold text-accent"
+                >3</span
+              >
+              <p class="pt-1 text-foreground/80">
+                Využijte 20 zpráv zdarma. Potom si můžete dokoupit další a
+                pokračovat.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-border py-12 text-center">
+      <h2 class="mb-4 text-2xl font-semibold sm:text-3xl">
+        Začněte otázkou, která vás právě oslovuje
+      </h2>
+      <p class="mx-auto mb-7 max-w-xl text-foreground/70">
+        Rozhovor probíhá v Telegramu a vede jej AI, nikoli přímo Janinka Živa.
+      </p>
+      <a
+        href={botURL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block rounded bg-accent px-7 py-3.5 font-semibold text-white transition-opacity hover:opacity-90"
+      >
+        Vyzkoušet 20 zpráv zdarma →
+      </a>
+    </section>
+
+    <aside class="py-10">
+      <div class="rounded-lg border border-border bg-muted/30 p-6">
+        <h2 class="mb-2 font-semibold">Důležité upozornění</h2>
+        <p class="text-sm leading-relaxed text-foreground/70">
+          AI průvodce nabízí podněty k zamyšlení nad obsahem knihy a může se
+          mýlit. Nenahrazuje osobní konzultaci ani odbornou zdravotní,
+          psychologickou nebo právní pomoc. Do chatu neposílejte údaje, podle
+          kterých vás lze identifikovat.
+        </p>
+      </div>
+    </aside>
+  </main>
+  <Footer />
+</Layout>

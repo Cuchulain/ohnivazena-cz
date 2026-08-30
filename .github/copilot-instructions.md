@@ -1,25 +1,29 @@
 # Instrukce pro projekt: Ohnivá žena — Astro + AstroPaper
 
 ## Účel projektu
+
 Migrace webu https://ohnivazena.cz z WordPressu do statického generátoru **Astro** s šablonou **AstroPaper v5**. Web patří Janince **Živě** — průvodkyni ženskou spiritualitou, přírodou, obřady a přirozeným bytím.
 
 ---
 
 ## Struktura nové prezentace
 
-Nová prezentace obsahuje tři hlavní stránky:
+Nová prezentace obsahuje tyto hlavní stránky:
 
 1. **Úvodní stránka** (`src/pages/index.astro`)
 2. **Čím se zabývám** (`src/pages/cim-se-zabyvam.astro`)
 3. **O mně — medailonek** (`src/pages/kdo-jsem.astro`)
+4. **Kontakt** (`src/pages/kontakt.astro`)
+5. **AI průvodce Manuálem moudré ženy** (`src/pages/manual-moudre-zeny.astro`)
 
-Web neobsahuje blog ani žádné další stránky.
+Další obsahové stránky lze přidávat podle potřeb projektu.
 
 ---
 
 ## Klíčový obsah a sdělení
 
 ### Úvodní stránka
+
 - Obsahuje slogan/název: **„naraJana"**
 - Hlavní motto: **„Pojďme žít sjednoceni se sebou, nalezením spojení se Zemí a Vesmírem."**
 - Úvodní půlhodina konzultace je **zdarma** — tuto informaci vždy uvádět prominentně
@@ -27,6 +31,7 @@ Web neobsahuje blog ani žádné další stránky.
 ### Logo / nápis „naraJana"
 
 Nápis vychází z digitálního návrhu:
+
 - Písmena **NARA** a **ANA** jsou velká, čistá, geometrická — styl **sans-serif** (ne serif, ne hand-lettered)
 - Doporučený font: **Montserrat SemiBold** nebo **Raleway** (oba na Google Fonts); finální výběr k upřesnění — Janinka říká „písmo ještě není ONO"
 - Středové **J** je vizuální dominanta: tenká svislá čára **bez příčky**, s velkou ozdobnou spodní smyčkou sestupující hluboko pod účaří — stylem odpovídá **malému písmenu j** zvětšenému na výšku celého nápisu
@@ -35,6 +40,7 @@ Nápis vychází z digitálního návrhu:
 - Barva nápisu: `--accent` (#d4620f) na světlém pozadí webu
 
 ### Zaměření Janinky
+
 - **Magie Země:** obřady, spolupráce s přírodou, přírodní cykly, živly
 - **Magie Vesmíru:** andělé, archandělé, nanebevzetí mistři, vesmírné energie
 - **Šetrný přístup ke zdraví:** alternativy ke klasické medicíně, homeopatie, RAW výživa
@@ -49,18 +55,18 @@ Web nepoužívá komentáře ani diskuze. Vybraná svědectví jsou zakomponová
 **Na úvodní stránce** (`index.astro`) — tři krátká svědectví jako citáty, umístěná pod mottem nebo před CTA tlačítkem konzultace:
 
 > „Spolupráce s Janinkou je skvělá. Hledala jsem východisko z komplikovaných vztahů s muži a našla. Cítím se svěže, svobodně, blíž své přirozenosti."
-> — *Kristýna Magnusková*
+> — _Kristýna Magnusková_
 
 > „Parádní spolupráce. Nádherné uvolnění. Hodinka utekla jako nic. Mám hned lepší den a věřím, že to tak bude už pořád."
-> — *Ianete*
+> — _Ianete_
 
 > „Plnohodnotné rady od úžasné ženy. Je úžasná žena, která umí vždy moudře poradit."
-> — *Pavlína*
+> — _Pavlína_
 
 **Na stránce „Čím se zabývám"** (`cim-se-zabyvam.astro`) — jedno delší svědectví jako příběh, u sekce duchovní práce a obřadů:
 
 > „Byl jsem čerstvě po rozchodu se svou nejmilovanější přítelkyní. Oslovil jsem Janinku. Probrala se mnou vztyčné body, šli jsme na věc. Byl úplněk a svátek Valentína. Cítil jsem hlubokou ztrátu a žal, který vyvrcholil ve vyhrknuté slzy — ale pak jsem se cítil lehce, svobodně. Jako kdybych se poprvé svobodně nadechl. Pokud máte jakýkoli problém, co vás oslabuje, nečekejte. Oslovte tuto skvělou ženu. Má informace přímo ze zdroje."
-> — *Gabriel Angell*
+> — _Gabriel Angell_
 
 Svědectví stylizovat jako blokové citáty (`<blockquote>`) s akcentní barvou (`--accent`) nebo jako karty s jemným pozadím (`--muted`).
 
@@ -89,7 +95,7 @@ export const SITE = {
   desc: "Průvodkyně na cestě k přirozenosti ženy, přírodě a vědomí sebe.",
   title: "Ohnivá žena",
   ogImage: "og-ohnivazena.jpg",
-  lightAndDarkMode: false,           // pouze světlý režim
+  lightAndDarkMode: false, // pouze světlý režim
   lang: "cs",
   timezone: "Europe/Prague",
 } as const;
@@ -104,11 +110,11 @@ Vždy použij tuto paletu v `src/styles/global.css`. **Nikdy nepoužívej výcho
 ```css
 :root,
 html[data-theme="light"] {
-  --background: #fffaf5;      /* teplá bílá */
-  --foreground: #2d1f0e;      /* tmavě hnědá — čitelný text */
-  --accent: #d4620f;          /* hluboká oranžová — odkazy, akcenty */
-  --muted: #fde8d0;           /* světle broskvová — karty, hover */
-  --border: #f5c99a;          /* zlatavě oranžová — orámování */
+  --background: #fffaf5; /* teplá bílá */
+  --foreground: #2d1f0e; /* tmavě hnědá — čitelný text */
+  --accent: #d4620f; /* hluboká oranžová — odkazy, akcenty */
+  --muted: #fde8d0; /* světle broskvová — karty, hover */
+  --border: #f5c99a; /* zlatavě oranžová — orámování */
 }
 ```
 
@@ -151,6 +157,7 @@ Přidej mandalu jako fixní dekorativní pozadí do `src/layouts/Layout.astro` (
 ```
 
 Pravidla pro mandalu:
+
 - `opacity` vždy mezi `0.03` a `0.06` — jen jemný stín, nesmí rušit čitelnost
 - `pointer-events-none` a `aria-hidden="true"` — nesmí ovlivnit přístupnost ani interakci
 - `z-0` — vždy za veškerým obsahem
@@ -161,14 +168,15 @@ Pravidla pro mandalu:
 
 ## Stránky
 
-Web obsahuje přesně čtyři stránky — žádné další nevytvářet:
+Aktuální hlavní stránky webu:
 
-| URL | Soubor |
-|---|---|
-| `/` | `src/pages/index.astro` |
-| `/cim-se-zabyvam/` | `src/pages/cim-se-zabyvam.astro` |
-| `/kdo-jsem/` | `src/pages/kdo-jsem.astro` |
-| `/kontakt/` | `src/pages/kontakt.astro` |
+| URL                    | Soubor                               |
+| ---------------------- | ------------------------------------ |
+| `/`                    | `src/pages/index.astro`              |
+| `/cim-se-zabyvam/`     | `src/pages/cim-se-zabyvam.astro`     |
+| `/kdo-jsem/`           | `src/pages/kdo-jsem.astro`           |
+| `/kontakt/`            | `src/pages/kontakt.astro`            |
+| `/manual-moudre-zeny/` | `src/pages/manual-moudre-zeny.astro` |
 
 ---
 
@@ -227,13 +235,18 @@ Registrace na https://web3forms.com — zdarma, 250 zpráv/měsíc, bez nutnosti
 ---
 // src/pages/index.astro nebo src/components/ContactForm.astro
 ---
+
 <form
   action="https://api.web3forms.com/submit"
   method="POST"
   class="flex flex-col gap-4"
 >
   <!-- Access key získaný z web3forms.com — uložit do .env jako PUBLIC_WEB3FORMS_KEY -->
-  <input type="hidden" name="access_key" value={import.meta.env.PUBLIC_WEB3FORMS_KEY} />
+  <input
+    type="hidden"
+    name="access_key"
+    value={import.meta.env.PUBLIC_WEB3FORMS_KEY}
+  />
   <input type="hidden" name="subject" value="Nová zpráva z ohnivazena.cz" />
   <input type="hidden" name="from_name" value="Ohnivá žena — web" />
   <!-- Honeypot proti spamu -->
@@ -246,7 +259,7 @@ Registrace na https://web3forms.com — zdarma, 250 zpráv/měsíc, bez nutnosti
       name="name"
       required
       placeholder="Vaše jméno"
-      class="rounded border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+      class="rounded border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:ring-2 focus:ring-[var(--accent)] focus:outline-none"
     />
   </label>
 
@@ -257,7 +270,7 @@ Registrace na https://web3forms.com — zdarma, 250 zpráv/měsíc, bez nutnosti
       name="email"
       required
       placeholder="vas@email.cz"
-      class="rounded border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+      class="rounded border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:ring-2 focus:ring-[var(--accent)] focus:outline-none"
     />
   </label>
 
@@ -268,13 +281,13 @@ Registrace na https://web3forms.com — zdarma, 250 zpráv/měsíc, bez nutnosti
       required
       rows="4"
       placeholder="Napište mi, s čím vám mohu pomoci…"
-      class="rounded border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--accent)]"
+      class="rounded border border-[var(--border)] bg-[var(--background)] px-3 py-2 focus:ring-2 focus:ring-[var(--accent)] focus:outline-none"
     ></textarea>
   </label>
 
   <button
     type="submit"
-    class="rounded bg-[var(--accent)] px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+    class="rounded bg-[var(--accent)] px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
   >
     Odeslat zprávu
   </button>
@@ -299,7 +312,8 @@ Pokud Janinka chce okamžitou notifikaci do Telegramu místo (nebo vedle) e-mail
 // worker.js — nasadit na Cloudflare Workers
 export default {
   async fetch(request) {
-    if (request.method !== "POST") return new Response("Method Not Allowed", { status: 405 });
+    if (request.method !== "POST")
+      return new Response("Method Not Allowed", { status: 405 });
 
     const data = await request.json();
     const text = `📩 Nová zpráva z ohnivazena.cz\n\n👤 ${data.name}\n📧 ${data.email}\n\n${data.message}`;
@@ -390,6 +404,7 @@ jobs:
 ```
 
 Vlastní doména (`ohnivazena.cz`):
+
 - Do `public/` přidat soubor `CNAME` s obsahem `ohnivazena.cz`
 - V nastavení GitHub repozitáře → Pages → Custom domain nastavit `ohnivazena.cz`
 
@@ -398,6 +413,7 @@ Vlastní doména (`ohnivazena.cz`):
 ## Komentáře
 
 Původní WordPress komentáře **nepřenášet** do statického webu. Pokud klient požaduje systém komentářů, navrhnout:
+
 1. **Giscus** (GitHub Discussions) — doporučeno
 2. **Disqus** — pouze jako záložní varianta
 

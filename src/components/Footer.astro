@@ -21,13 +21,19 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
       "flex flex-col items-center justify-center gap-2 text-center",
     ]}
   >
+    <a
+      href="/manual-moudre-zeny/"
+      class="text-sm font-medium text-accent hover:underline"
+    >
+      AI průvodce Manuálem moudré ženy
+    </a>
     <span class="text-sm text-foreground/60">
       ©&nbsp;{currentYear} vytvořil <a
         href="https://jancejka.cz"
         target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-accent transition-colors"
-      >Jan Čejka</a>. Všechna práva vyhrazena.
+        class="transition-colors hover:text-accent">Jan Čejka</a
+      >. Všechna práva vyhrazena.
     </span>
   </div>
 </footer>

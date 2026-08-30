@@ -10,19 +10,29 @@ const id = `ap-${Math.random().toString(36).slice(2, 8)}`;
 <div class="audio-player" data-id={id}>
   <audio data-audio src={src} preload="none"></audio>
 
-  <button
-    data-play
-    aria-label={label}
-    class="play-btn"
-    type="button"
-  >
+  <button data-play aria-label={label} class="play-btn" type="button">
     <!-- Play icon -->
-    <svg data-icon-play viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
-      <path d="M8 5v14l11-7z"/>
+    <svg
+      data-icon-play
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      width="20"
+      height="20"
+      aria-hidden="true"
+    >
+      <path d="M8 5v14l11-7z"></path>
     </svg>
     <!-- Pause icon -->
-    <svg data-icon-pause viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true" style="display:none">
-      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    <svg
+      data-icon-pause
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      width="20"
+      height="20"
+      aria-hidden="true"
+      style="display:none"
+    >
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
     </svg>
   </button>
 
@@ -60,7 +70,9 @@ const id = `ap-${Math.random().toString(36).slice(2, 8)}`;
     cursor: pointer;
     transition: opacity 0.15s;
   }
-  .play-btn:hover { opacity: 0.85; }
+  .play-btn:hover {
+    opacity: 0.85;
+  }
 
   .progress-wrap {
     flex: 1;
@@ -91,32 +103,40 @@ const id = `ap-${Math.random().toString(36).slice(2, 8)}`;
 </style>
 
 <script>
-  document.querySelectorAll<HTMLElement>(".audio-player").forEach((player) => {
+  document.querySelectorAll<HTMLElement>(".audio-player").forEach(player => {
     const audio = player.querySelector<HTMLAudioElement>("[data-audio]")!;
     const playBtn = player.querySelector<HTMLButtonElement>("[data-play]")!;
     const iconPlay = player.querySelector<SVGElement>("[data-icon-play]")!;
     const iconPause = player.querySelector<SVGElement>("[data-icon-pause]")!;
-    const progressWrap = player.querySelector<HTMLElement>("[data-progress-wrap]")!;
+    const progressWrap = player.querySelector<HTMLElement>(
+      "[data-progress-wrap]"
+    )!;
     const progressBar = player.querySelector<HTMLElement>("[data-progress]")!;
     const timeEl = player.querySelector<HTMLElement>("[data-time]")!;
 
     const fmt = (s: number) => {
       const m = Math.floor(s / 60);
-      const sec = Math.floor(s % 60).toString().padStart(2, "0");
+      const sec = Math.floor(s % 60)
+        .toString()
+        .padStart(2, "0");
       return `${m}:${sec}`;
     };
 
     playBtn.addEventListener("click", () => {
       if (audio.paused) {
         // Pause all other players on the page
-        document.querySelectorAll<HTMLAudioElement>(".audio-player [data-audio]").forEach((a) => {
-          if (a !== audio) {
-            a.pause();
-            const p = a.closest(".audio-player")!;
-            p.querySelector<SVGElement>("[data-icon-play]")!.style.display = "";
-            p.querySelector<SVGElement>("[data-icon-pause]")!.style.display = "none";
-          }
-        });
+        document
+          .querySelectorAll<HTMLAudioElement>(".audio-player [data-audio]")
+          .forEach(a => {
+            if (a !== audio) {
+              a.pause();
+              const p = a.closest(".audio-player")!;
+              p.querySelector<SVGElement>("[data-icon-play]")!.style.display =
+                "";
+              p.querySelector<SVGElement>("[data-icon-pause]")!.style.display =
+                "none";
+            }
+          });
         audio.play();
       } else {
         audio.pause();
@@ -145,7 +165,7 @@ const id = `ap-${Math.random().toString(36).slice(2, 8)}`;
       timeEl.textContent = "0:00";
     });
 
-    progressWrap.addEventListener("click", (e) => {
+    progressWrap.addEventListener("click", e => {
       const rect = progressWrap.getBoundingClientRect();
       const pct = (e.clientX - rect.left) / rect.width;
       if (audio.duration) audio.currentTime = pct * audio.duration;
