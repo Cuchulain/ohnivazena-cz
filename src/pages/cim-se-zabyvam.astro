@@ -11,22 +11,24 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
 >
   <Header />
   <main id="main-content" class="app-layout">
-
-    <section class="pt-10 pb-6 border-b border-border">
-      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Čím se zabývám</h1>
-      <p class="text-foreground/75 max-w-xl leading-relaxed">
-        Provázím ženy i muže na cestě k sobě — k tělu, k přírodě, k vědomí. Každá oblast vychází z hlubokého propojení se zemí i s vesmírem.
+    <section class="border-b border-border pt-10 pb-6">
+      <h1 class="mb-3 text-3xl font-bold sm:text-4xl">Čím se zabývám</h1>
+      <p class="max-w-xl leading-relaxed text-foreground/75">
+        Provázím ženy i muže na cestě k sobě — k tělu, k přírodě, k vědomí.
+        Každá oblast vychází z hlubokého propojení se zemí i s vesmírem.
       </p>
     </section>
 
     <!-- Magie Země -->
-    <section class="py-10 border-b border-border">
+    <section class="border-b border-border py-10">
       <div class="max-w-2xl">
-        <h2 class="text-2xl font-semibold text-accent mb-4">🌿 Magie Země</h2>
-        <p class="leading-relaxed mb-3">
-          Země nás nese, živí a uzdravuje — buďme s ní v přímém kontaktu. Spolupracuji s přírodními energiemi a přirozenými cykly, které nás pomáhají ukotvit a nalézt rovnováhu.
+        <h2 class="mb-4 text-2xl font-semibold text-accent">🌿 Magie Země</h2>
+        <p class="mb-3 leading-relaxed">
+          Země nás nese, živí a uzdravuje — buďme s ní v přímém kontaktu.
+          Spolupracuji s přírodními energiemi a přirozenými cykly, které nás
+          pomáhají ukotvit a nalézt rovnováhu.
         </p>
-        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+        <ul class="list-inside list-disc space-y-1 text-sm text-foreground/80">
           <li>Sezónní obřady a oslavy přírodních svátků</li>
           <li>Práce s živly — zemí, vodou, ohněm, vzduchem</li>
           <li>Propojení s přírodními cykly a lunárním kalendářem</li>
@@ -35,23 +37,33 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
 
         <!-- Meditace Návrat k Bohyni Země -->
         <div class="mt-8 pt-6">
-          <h3 class="text-xl font-semibold mb-2">🌍 Meditace: Návrat k Bohyni Země</h3>
-          <p class="text-foreground/80 leading-relaxed text-sm mb-4">
-            Hlubinná meditace, která vás provede návratem k zemské Bohyni. Nechte se unést zvukem a energií zpět ke kořenům.
+          <h3 class="mb-2 text-xl font-semibold">
+            🌍 Meditace: Návrat k Bohyni Země
+          </h3>
+          <p class="mb-4 text-sm leading-relaxed text-foreground/80">
+            Hlubinná meditace, která vás provede návratem k zemské Bohyni.
+            Nechte se unést zvukem a energií zpět ke kořenům.
           </p>
-          <AudioPlayer src="/audio/Janinka-Ziva-Navrat-k-Bohyni-Zeme.mp3" label="Přehrát ukázku" />
+          <AudioPlayer
+            src="/audio/Janinka-Ziva-Navrat-k-Bohyni-Zeme.mp3"
+            label="Přehrát ukázku"
+          />
         </div>
       </div>
     </section>
 
     <!-- Magie Vesmíru -->
-    <section class="py-10 border-b border-border">
+    <section class="border-b border-border py-10">
       <div class="max-w-2xl">
-        <h2 class="text-2xl font-semibold text-accent mb-4">✨ Magie Vesmíru</h2>
-        <p class="leading-relaxed mb-3">
-          Andělé, archandělé a nanebevzatí mistři jsou průvodci, kteří vždy čekají, až je oslovíme. Pomáhám navázat vědomé spojení s těmito bytostmi a přijímat jejich podporu v každodenním životě.
+        <h2 class="mb-4 text-2xl font-semibold text-accent">
+          ✨ Magie Vesmíru
+        </h2>
+        <p class="mb-3 leading-relaxed">
+          Andělé, archandělé a nanebevzatí mistři jsou průvodci, kteří vždy
+          čekají, až je oslovíme. Pomáhám navázat vědomé spojení s těmito
+          bytostmi a přijímat jejich podporu v každodenním životě.
         </p>
-        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+        <ul class="list-inside list-disc space-y-1 text-sm text-foreground/80">
           <li>Spolupráce s anděly a archanděly</li>
           <li>Spojení s nanebevzatými mistry a duchovními průvodci</li>
           <li>Spolupráce s vesmírnými energiemi a světlem</li>
@@ -61,23 +73,37 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
         <!-- Svědectví — Gabriel Angell -->
         <div class="mt-8 pt-6">
           <figure class="rounded-lg border border-border bg-muted/30 p-6">
-            <blockquote class="leading-relaxed italic text-foreground/80 text-sm">
-              „Byl jsem čerstvě po rozchodu se svou nejmilovanější přítelkyní. Oslovil jsem Janinku. Probrala se mnou vztyčné body, šli jsme na věc. Byl úplněk a svátek Valentína. Cítil jsem hlubokou ztrátu a žal, který vyvrcholil ve vyhrknuté slzy — ale pak jsem se cítil lehce, svobodně. Jako kdybych se poprvé svobodně nadechl. Pokud máte jakýkoli problém, co vás oslabuje, nečekejte. Oslovte tuto skvělou ženu. Má informace přímo ze zdroje."
+            <blockquote
+              class="text-sm leading-relaxed text-foreground/80 italic"
+            >
+              „Byl jsem čerstvě po rozchodu se svou nejmilovanější přítelkyní.
+              Oslovil jsem Janinku. Probrala se mnou vztyčné body, šli jsme na
+              věc. Byl úplněk a svátek Valentína. Cítil jsem hlubokou ztrátu a
+              žal, který vyvrcholil ve vyhrknuté slzy — ale pak jsem se cítil
+              lehce, svobodně. Jako kdybych se poprvé svobodně nadechl. Pokud
+              máte jakýkoli problém, co vás oslabuje, nečekejte. Oslovte tuto
+              skvělou ženu. Má informace přímo ze zdroje."
             </blockquote>
-            <figcaption class="mt-4 text-sm font-medium text-accent">— Gabriel Angell</figcaption>
+            <figcaption class="mt-4 text-sm font-medium text-accent">
+              — Gabriel Angell
+            </figcaption>
           </figure>
         </div>
       </div>
     </section>
 
     <!-- Šetrný přístup ke zdraví -->
-    <section class="py-10 border-b border-border">
+    <section class="border-b border-border py-10">
       <div class="max-w-2xl">
-        <h2 class="text-2xl font-semibold text-accent mb-4">🌱 Šetrný přístup ke zdraví</h2>
-        <p class="leading-relaxed mb-3">
-          Tělo je moudrý systém, který nám dává signály. Věřím v přirozenou podporu organismu — homeopatii, bylinnou medicínu a vědomou výživu jako cestu k vitálnímu zdraví.
+        <h2 class="mb-4 text-2xl font-semibold text-accent">
+          🌱 Šetrný přístup ke zdraví
+        </h2>
+        <p class="mb-3 leading-relaxed">
+          Tělo je moudrý systém, který nám dává signály. Věřím v přirozenou
+          podporu organismu — homeopatii, bylinnou medicínu a vědomou výživu
+          jako cestu k vitálnímu zdraví.
         </p>
-        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+        <ul class="list-inside list-disc space-y-1 text-sm text-foreground/80">
           <li>Homeopatie a alternativy ke klasické medicíně</li>
           <li>RAW výživa a živé potraviny</li>
           <li>Bylinná medicína a přírodní léčba</li>
@@ -85,28 +111,49 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
         </ul>
 
         <!-- Manuál moudré ženy -->
-        <div class="mt-8 pt-6 rounded-lg border-border/40 bg-muted/30 p-5">
-          <h3 class="text-xl font-semibold mb-2">📖 Manuál moudré ženy</h3>
-          <p class="text-foreground/80 leading-relaxed text-sm mb-3">
-            Ebook provázející ženu třemi archetypy ženství — Pannou, Matkou a Stařenou. Ve 28 dnech, inspirovaných lunárním cyklem, nabídne praktická cvičení, zamyšlení nad výživou a tělem, vědomým mateřstvím i ženskou moudrostí předchozích pokolení.
+        <div class="mt-8 rounded-lg border-border/40 bg-muted/30 p-5 pt-6">
+          <h3 class="mb-2 text-xl font-semibold">📖 Manuál moudré ženy</h3>
+          <p class="mb-3 text-sm leading-relaxed text-foreground/80">
+            Ebook provázející ženu třemi archetypy ženství — Pannou, Matkou a
+            Stařenou. Ve 28 dnech, inspirovaných lunárním cyklem, nabídne
+            praktická cvičení, zamyšlení nad výživou a tělem, vědomým mateřstvím
+            i ženskou moudrostí předchozích pokolení.
           </p>
-          <p class="text-foreground/80 leading-relaxed text-sm mb-3">
-            Obsah knihy zná také AI průvodce BuddyPro. Můžete se ho ptát na jednotlivá témata,
-            cvičení i všechny čtyři týdny proměny. Prvních 20 zpráv je zdarma a další lze dokoupit.
+          <p class="mb-3 text-sm leading-relaxed text-foreground/80">
+            Obsah knihy zná také AI průvodce BuddyPro. Můžete se ho ptát na
+            jednotlivá témata, cvičení i všechny čtyři týdny proměny. Prvních 20
+            zpráv je zdarma a další lze dokoupit.
           </p>
           <!-- Recenze -->
           <div class="mt-5 space-y-3">
-            <blockquote class="border-l-2 border-accent pl-4 text-sm text-foreground/75 italic leading-relaxed">
-              „Ebook Manuál moudré Ženy zraje jako žena sama, a tak se jazyk a složitost vyprávění mění spolu s jejími fázemi. Některé věci pro mne už byly staré známé, ale mnoho informací mne donutilo se nad vším zamyslet a dozvěděla jsem se také spoustu nového."
-              <footer class="mt-1 not-italic text-xs text-foreground/50">— <cite>Tereza</cite></footer>
+            <blockquote
+              class="border-l-2 border-accent pl-4 text-sm leading-relaxed text-foreground/75 italic"
+            >
+              „Ebook Manuál moudré Ženy zraje jako žena sama, a tak se jazyk a
+              složitost vyprávění mění spolu s jejími fázemi. Některé věci pro
+              mne už byly staré známé, ale mnoho informací mne donutilo se nad
+              vším zamyslet a dozvěděla jsem se také spoustu nového."
+              <footer class="mt-1 text-xs text-foreground/50 not-italic">
+                — <cite>Tereza</cite>
+              </footer>
             </blockquote>
-            <blockquote class="border-l-2 border-accent pl-4 text-sm text-foreground/75 italic leading-relaxed">
-              „Na začátku jsme byly spolu s Janinkou známé z FB. Dnes je to pro mne drahocenný poklad v mém životě. Vřele doporučuji spolupráci a její koučing."
-              <footer class="mt-1 not-italic text-xs text-foreground/50">— <cite>Jozefína Malošeková</cite></footer>
+            <blockquote
+              class="border-l-2 border-accent pl-4 text-sm leading-relaxed text-foreground/75 italic"
+            >
+              „Na začátku jsme byly spolu s Janinkou známé z FB. Dnes je to pro
+              mne drahocenný poklad v mém životě. Vřele doporučuji spolupráci a
+              její koučing."
+              <footer class="mt-1 text-xs text-foreground/50 not-italic">
+                — <cite>Jozefína Malošeková</cite>
+              </footer>
             </blockquote>
-            <blockquote class="border-l-2 border-accent pl-4 text-sm text-foreground/75 italic leading-relaxed">
+            <blockquote
+              class="border-l-2 border-accent pl-4 text-sm leading-relaxed text-foreground/75 italic"
+            >
               „Tuto nádhernou proměnu přeji všem ženám. Děkuji, Janinko."
-              <footer class="mt-1 not-italic text-xs text-foreground/50">— <cite>Kristýna Magnusková</cite></footer>
+              <footer class="mt-1 text-xs text-foreground/50 not-italic">
+                — <cite>Kristýna Magnusková</cite>
+              </footer>
             </blockquote>
           </div>
 
@@ -115,19 +162,19 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
               href="https://t.me/uSkyCzBot?start=MZENY20"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block rounded bg-accent px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              class="inline-block rounded bg-accent px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Otevřít AI průvodce →
             </a>
             <a
               href="/manual-moudre-zeny/"
-              class="inline-block rounded border border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-muted transition-colors"
+              class="inline-block rounded border border-accent px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-muted"
             >
               Jak průvodce funguje
             </a>
             <a
               href="/kontakt/"
-              class="inline-block rounded border border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-muted transition-colors"
+              class="inline-block rounded border border-accent px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-muted"
             >
               Mám zájem o ebook
             </a>
@@ -137,13 +184,17 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
     </section>
 
     <!-- Péče o děti -->
-    <section class="py-10 border-b border-border">
+    <section class="border-b border-border py-10">
       <div class="max-w-2xl">
-        <h2 class="text-2xl font-semibold text-accent mb-4">👶 Péče o děti a přirozené rodičovství</h2>
-        <p class="leading-relaxed mb-3">
-          Děti přicházejí na svět jako plně vědomé bytosti. Ráda pomohu rodičům navázat hluboký kontakt se svým dítětem a jít cestou přirozeného rodičovství.
+        <h2 class="mb-4 text-2xl font-semibold text-accent">
+          👶 Péče o děti a přirozené rodičovství
+        </h2>
+        <p class="mb-3 leading-relaxed">
+          Děti přicházejí na svět jako plně vědomé bytosti. Ráda pomohu rodičům
+          navázat hluboký kontakt se svým dítětem a jít cestou přirozeného
+          rodičovství.
         </p>
-        <ul class="list-disc list-inside text-foreground/80 space-y-1 text-sm">
+        <ul class="list-inside list-disc space-y-1 text-sm text-foreground/80">
           <li>Domácí porody a přirozené porodnictví</li>
           <li>Přirozené a respektující rodičovství</li>
           <li>Individuální vzdělávání a unschooling</li>
@@ -152,40 +203,53 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
 
         <!-- Duhové uspávanky -->
         <div class="mt-8 pt-6">
-          <div class="flex flex-col sm:flex-row gap-6 items-start mb-4">
+          <div class="mb-4 flex flex-col items-start gap-6 sm:flex-row">
             <img
               src="/images/duhove-uspavanky-obal.jpg"
               alt="Duhové uspávanky — obal"
               width="120"
               height="180"
-              class="rounded-lg shadow-md flex-shrink-0 object-cover"
+              class="flex-shrink-0 rounded-lg object-cover shadow-md"
               loading="lazy"
             />
             <div>
-              <h3 class="text-xl font-semibold mb-2">🎵 Duhové uspávanky</h3>
-              <p class="text-foreground/80 leading-relaxed text-sm mb-4">
-                11 originálních uspávanek a relaxačních příběhů pro děti všeho věku — bez strašidel a bubáků. Příběhy plné pohody, vůní a chutí, které si vychutnají i dospělí. Text i ilustrace jsem vytvořila spolu s dcerou Aničkou.
+              <h3 class="mb-2 text-xl font-semibold">🎵 Duhové uspávanky</h3>
+              <p class="mb-4 text-sm leading-relaxed text-foreground/80">
+                11 originálních uspávanek a relaxačních příběhů pro děti všeho
+                věku — bez strašidel a bubáků. Příběhy plné pohody, vůní a
+                chutí, které si vychutnají i dospělí. Text i ilustrace jsem
+                vytvořila spolu s dcerou Aničkou.
               </p>
-              <p class="text-foreground/60 text-xs mt-2 mb-4">
+              <p class="mt-2 mb-4 text-xs text-foreground/60">
                 Hudbu pro album laskavě poskytl hudebník a skladatel
                 <a
                   href="https://www.youtube.com/@tomhops5757"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-accent hover:underline"
-                >Tomáš Chmel</a>, kterého znám osobně. Byl rád, že jeho tóny najdou cestu k dětem.
+                  class="text-accent hover:underline">Tomáš Chmel</a
+                >, kterého znám osobně. Byl rád, že jeho tóny najdou cestu k
+                dětem.
               </p>
 
               <!-- Ukázkový track -->
-              <p class="text-xs font-medium text-foreground/60 mb-2">Ukázka — O holčičce Rybičce a zatoulaném delfínkovi</p>
-              <AudioPlayer src="/audio/duhove-uspavanky/01-o-holcicce-rybicce.mp3" label="Přehrát ukázku" />
+              <p class="mb-2 text-xs font-medium text-foreground/60">
+                Ukázka — O holčičce Rybičce a zatoulaném delfínkovi
+              </p>
+              <AudioPlayer
+                src="/audio/duhove-uspavanky/01-o-holcicce-rybicce.mp3"
+                label="Přehrát ukázku"
+              />
             </div>
           </div>
 
           <!-- Seznam všech stop -->
           <div class="mt-4">
-            <p class="text-sm font-medium text-foreground/70 mb-2">Celé album (11 příběhů):</p>
-            <ol class="list-decimal list-inside text-sm text-foreground/60 space-y-1 pl-1 sm:columns-2">
+            <p class="mb-2 text-sm font-medium text-foreground/70">
+              Celé album (11 příběhů):
+            </p>
+            <ol
+              class="list-inside list-decimal space-y-1 pl-1 text-sm text-foreground/60 sm:columns-2"
+            >
               <li>O holčičce Rybičce a zatoulaném delfínkovi</li>
               <li>Pozemšťan mimozemšťan</li>
               <li>Víli domácnost</li>
@@ -201,7 +265,7 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
             <div class="mt-4">
               <a
                 href="/kontakt/"
-                class="inline-block rounded border border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-muted transition-colors"
+                class="inline-block rounded border border-accent px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-muted"
               >
                 Mám zájem o album
               </a>
@@ -210,9 +274,6 @@ import AudioPlayer from "@/components/AudioPlayer.astro";
         </div>
       </div>
     </section>
-
-
-
   </main>
   <Footer />
 </Layout>

@@ -37,10 +37,7 @@ const isActive = (path: string) => {
       "flex items-baseline justify-between sm:items-center",
     ]}
   >
-    <a
-      href="/"
-      class="absolute py-1 sm:static sm:my-auto"
-    >
+    <a href="/" class="absolute py-1 sm:static sm:my-auto">
       <img
         src="/logo-head.png"
         alt={SITE.title}
@@ -81,16 +78,21 @@ const isActive = (path: string) => {
         ]}
       >
         <li class="col-span-2">
-          <a href="/cim-se-zabyvam/" class:list={{ "active-nav": isActive("/cim-se-zabyvam") }}>
+          <a
+            href="/cim-se-zabyvam/"
+            class:list={{ "active-nav": isActive("/cim-se-zabyvam") }}
+          >
             Čím se zabývám
           </a>
         </li>
         <li class="col-span-2">
-          <a href="/kdo-jsem/" class:list={{ "active-nav": isActive("/kdo-jsem") }}>
+          <a
+            href="/kdo-jsem/"
+            class:list={{ "active-nav": isActive("/kdo-jsem") }}
+          >
             Kdo jsem
           </a>
         </li>
-
       </ul>
 
       <button
@@ -110,8 +112,10 @@ const isActive = (path: string) => {
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <circle cx="12" cy="12" r="4"/>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          <circle cx="12" cy="12" r="4"></circle>
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+          ></path>
         </svg>
         <!-- Měsíc — zobrazit ve světlém režimu -->
         <svg
@@ -125,7 +129,7 @@ const isActive = (path: string) => {
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       </button>
     </nav>

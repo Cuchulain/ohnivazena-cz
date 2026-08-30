@@ -10,15 +10,14 @@ import Footer from "@/components/Footer.astro";
 >
   <Header />
   <main id="main-content" class="app-layout">
-
-    <section class="pt-10 pb-6 border-b border-border">
-      <h1 class="text-3xl sm:text-4xl font-bold mb-3">Mám zájem</h1>
-      <p class="text-foreground/75 max-w-xl leading-relaxed">
+    <section class="border-b border-border pt-10 pb-6">
+      <h1 class="mb-3 text-3xl font-bold sm:text-4xl">Mám zájem</h1>
+      <p class="max-w-xl leading-relaxed text-foreground/75">
         Napište mi, o co máte zájem — ebook nebo album. Ozvu se vám co nejdříve.
       </p>
     </section>
 
-    <section class="py-10 max-w-lg">
+    <section class="max-w-lg py-10">
       <form
         id="contact-form"
         action="https://api.web3forms.com/submit"
@@ -31,7 +30,11 @@ import Footer from "@/components/Footer.astro";
           name="access_key"
           value={import.meta.env.PUBLIC_WEB3FORMS_KEY ?? ""}
         />
-        <input type="hidden" name="subject" value="Nová zpráva z ohnivazena.cz" />
+        <input
+          type="hidden"
+          name="subject"
+          value="Nová zpráva z ohnivazena.cz"
+        />
         <input type="hidden" name="from_name" value="Ohnivá žena — web" />
         <input type="hidden" name="redirect" value="false" />
         <!-- Honeypot proti spamu -->
@@ -51,7 +54,7 @@ import Footer from "@/components/Footer.astro";
             name="name"
             required
             placeholder="Vaše jméno"
-            class="rounded border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+            class="rounded border border-border bg-background px-3 py-2 focus:ring-2 focus:ring-accent focus:outline-none"
           />
         </label>
 
@@ -62,7 +65,7 @@ import Footer from "@/components/Footer.astro";
             name="email"
             required
             placeholder="vas@email.cz"
-            class="rounded border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent"
+            class="rounded border border-border bg-background px-3 py-2 focus:ring-2 focus:ring-accent focus:outline-none"
           />
         </label>
 
@@ -73,13 +76,13 @@ import Footer from "@/components/Footer.astro";
             required
             rows="5"
             placeholder="Mám zájem o… (ebook / album)"
-            class="rounded border border-border bg-background px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent resize-y"
+            class="resize-y rounded border border-border bg-background px-3 py-2 focus:ring-2 focus:ring-accent focus:outline-none"
           ></textarea>
         </label>
 
         <button
           type="submit"
-          class="rounded bg-accent px-6 py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+          class="rounded bg-accent px-6 py-3 font-semibold text-white transition-opacity hover:opacity-90"
         >
           Odeslat zprávu
         </button>
@@ -88,21 +91,24 @@ import Footer from "@/components/Footer.astro";
       <!-- Potvrzení po odeslání -->
       <div
         id="form-success"
-        class="hidden mt-6 rounded border border-border bg-muted/40 p-5 text-center"
+        class="mt-6 hidden rounded border border-border bg-muted/40 p-5 text-center"
       >
-        <p class="text-lg font-medium">Zpráva odeslána. Ozvu se vám co nejdříve. 🙏</p>
+        <p class="text-lg font-medium">
+          Zpráva odeslána. Ozvu se vám co nejdříve. 🙏
+        </p>
       </div>
     </section>
-
   </main>
   <Footer />
 </Layout>
 
 <script>
-  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const form = document.getElementById(
+    "contact-form"
+  ) as HTMLFormElement | null;
   const success = document.getElementById("form-success");
 
-  form?.addEventListener("submit", async (e) => {
+  form?.addEventListener("submit", async e => {
     e.preventDefault();
     const data = new FormData(form);
     const res = await fetch("https://api.web3forms.com/submit", {
