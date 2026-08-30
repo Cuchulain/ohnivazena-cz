@@ -1,6 +1,7 @@
 import { defineConfig, envField, fontProviders } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import umami from "@yeskunall/astro-umami";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import {
@@ -17,6 +18,10 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
+    }),
+    umami({
+      id: "d1d9d966-62f0-4a37-8a6f-07ee43ea7d28",
+      endpointUrl: "https://analytics.rebma.cz",
     }),
   ],
   markdown: {
